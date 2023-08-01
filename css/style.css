@@ -1,5 +1,6 @@
 /*Importando documentacion necesaria*/
 @import url(/css/responsive.css);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
 *{
     padding: 0;
@@ -9,3 +10,87 @@
     text-decoration: none;
 }
 
+:root{
+    --rellenoslaterales: 0px 20px 0px 20px;
+}
+
+.toolbar{
+    width: 100%;
+    height: 100px;
+    background-color: #2b2825;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--rellenoslaterales);
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+.toolbar .logo-nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.toolbar .logo{
+    width: 80px;
+    height: 80px;   
+}
+
+.toolbar .list-header{
+    display: flex;
+    gap: 30px;
+}
+
+.toolbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.toolbar i, label, input{
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+@media(max-width: 767px){
+
+    .toolbar{
+        display: flex;
+        align-items: center;
+        padding: 0px 15px 0px 15px;
+        height: 90px;
+    }
+
+    .toolbar i, label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        border: solid 1px white;
+    }
+
+    .toolbar .list-header{
+        display: none;
+    }
+
+    .toolbar .list-header .item-list-header{
+        padding: 10px 0px 10px 0px;
+    }
+
+    .toolbar input:checked ~ .list-header{
+        display: block;
+        position: absolute;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        transform: translateY(75%);
+        width: 100%;
+        margin-left: -14px;
+        background-color: #2b2825;
+    }
+}
