@@ -64,7 +64,20 @@
 }
 
 
+main{
+    width: 100%;
+    /*Alto de 100vh que es 1 pantalla*/
+    height: 100vh;
+    background:linear-gradient(rgba(5,7,12,0.25), rgba(5,7,12,0.25)), url(https://moussepedia.com/imagenes/mousse-de-pina-y-coco-1024x683.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 
+    /*Cubreme el tamaño del hero*/
+    background-size: cover;
+    z-index: -2;
+    color: white;
+
+}
 
 
 @media(max-width: 767px){
@@ -94,7 +107,7 @@
     }
 
     .toolbar .list-header{
-        transition: all .3s;
+        transition: all .8s;
         position: absolute;
         z-index: -1;
         display: block;
@@ -106,6 +119,7 @@
         margin-bottom: 100px;
         background-color: #2b2825;
         opacity: 0;
+        z-index: -5;
         
     }
 
@@ -125,6 +139,7 @@
         margin-left: -15px;
         background-color: #2b2825;
         opacity: 1;
+        z-index: 1;
         
     }
 }
