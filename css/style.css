@@ -42,6 +42,7 @@
 .toolbar .list-header{
     display: flex;
     gap: 30px;
+    font-size: 18px;
 }
 
 .toolbar a{
@@ -54,6 +55,17 @@
     color: white;
     display: none;
 }
+
+/*Hover para el header*/
+
+.toolbar .list-header a:hover{
+    color: #ffc5b5;
+    transition: all .3s;
+}
+
+
+
+
 
 @media(max-width: 767px){
 
@@ -75,12 +87,31 @@
         border: solid 1px white;
     }
 
+    .toolbar i:hover{
+        color: #ffc5b5;
+        border: solid 1px #ffc5b5;
+        transition: all .3s;
+    }
+
     .toolbar .list-header{
-        display: none;
+        transition: all .3s;
+        position: absolute;
+        z-index: -1;
+        display: block;
+        position: absolute;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        margin-left: -15px;
+        margin-bottom: 100px;
+        background-color: #2b2825;
+        opacity: 0;
+        
     }
 
     .toolbar .list-header .item-list-header{
         padding: 10px 0px 10px 0px;
+        
     }
 
     .toolbar input:checked ~ .list-header{
@@ -88,9 +119,12 @@
         position: absolute;
         text-align: center;
         padding: 10px 0px 10px 0px;
-        transform: translateY(75%);
+        margin-top: 50px;
+        transform: translateY(85%);
         width: 100%;
-        margin-left: -14px;
+        margin-left: -15px;
         background-color: #2b2825;
+        opacity: 1;
+        
     }
 }
