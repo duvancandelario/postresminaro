@@ -1,6 +1,7 @@
 /*Importando documentacion necesaria*/
 @import url(/css/responsive.css);
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Pacifico&display=swap');
 
 *{
     padding: 0;
@@ -39,10 +40,16 @@
     height: 80px;   
 }
 
+.toolbar .nombre-empresa{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    text-shadow: 3px 3px 8px black;
+}
 .toolbar .list-header{
     display: flex;
     gap: 30px;
     font-size: 18px;
+    text-shadow: 3px 3px 8px black; 
 }
 
 .toolbar a{
@@ -67,7 +74,7 @@
 main{
     width: 100%;
     /*Alto de 100vh que es 1 pantalla*/
-    height: 100vh;
+    height: 90vh;
     background:linear-gradient(rgba(5,7,12,0.25), rgba(5,7,12,0.25)), url(https://moussepedia.com/imagenes/mousse-de-pina-y-coco-1024x683.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -79,6 +86,44 @@ main{
 
 }
 
+.hero .contenido-home{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    align-items: flex-start;
+    padding: 100px 100px 0px 100px;
+    gap: 20px;
+    text-shadow: 3px 3px 8px black;
+}
+
+.hero .contenido-home .text-home{
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero .contenido-home .seccion-videos{
+    display: flex;
+    width: 500px;
+    padding-top: 10px;
+}
+
+.hero .contenido-home .seccion-videos .conocelos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.hero .contenido-home .seccion-videos .conocelos:hover{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffc5b5;
+    transition: all .3s;
+    text-shadow: 3px 3px 8px black;
+}
 
 @media(max-width: 767px){
 
@@ -142,4 +187,18 @@ main{
         z-index: 1;
         
     }
+
+    .hero .contenido-home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .hero .contenido-home .seccion-videos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
